@@ -1,0 +1,21 @@
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      Please choose your instance
+    </ion-item>
+
+    <ion-item>
+      <ion-select [(ngModel)]="selecteduser">
+        <ion-option *ngFor="let user of users" value="{{user.name}}">{{user.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button (click)="submit()">
+        Submit
+      </button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
